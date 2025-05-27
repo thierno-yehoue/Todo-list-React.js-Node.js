@@ -26,13 +26,13 @@ const writeTodos = (todos) => {
     fs.writeFileSync(DATA_FILE, JSON.stringify(todos, null, 2));
 };
 
-// GET toutes les tâches
+// GET List de toutes les tâches
 app.get('/api/todos', (req, res) => {
     const todos = readTodos();
     res.json(todos);
 });
 
-// POST nouvelle tâche
+// POST creer une nouvelle tâche
 app.post('/api/todos', (req, res) => {
     const todos = readTodos();
     const newTodo = {

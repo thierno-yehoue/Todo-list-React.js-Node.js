@@ -9,7 +9,7 @@ const theme = createTheme({
   },
 });
 
-const API_URL = 'http://localhost:5000/api/todos';
+const API_URL = process.env.REACT_APP_API_URL+'/api/todos'  || 'http://localhost:5000/api/todos';
 
 const Form = () => {
   const [newTodo, setNewTodo] = useState('');

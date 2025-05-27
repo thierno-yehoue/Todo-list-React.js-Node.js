@@ -30,7 +30,7 @@ const TodoCreator = ({ theme, todo, setTodo, clearInput, inputRef, isInputEmpty,
                 <FormControl   className={classes.label}>
                     <TextField
                         id="outlined-basic"
-                        label="Ajouter une tache" // better accessibility with Material UI
+                        label="Ajouter une tache" 
                         value={todo}
                         variant="outlined"
                         onChange={(e) => setTodo(e.target.value)}
@@ -44,9 +44,10 @@ const TodoCreator = ({ theme, todo, setTodo, clearInput, inputRef, isInputEmpty,
                         <></>
                         :
                         <>
-                    <FormHelperText id="component-error-text" className="form__error">
-                        Erreur: la tâche ne peut pas être vide
-                    </FormHelperText>                        </>
+                        <FormHelperText id="component-error-text" className="form__error">
+                            Erreur: la tâche ne peut pas être vide
+                        </FormHelperText>                       
+                        </>
                     }
                 </FormControl>
                 <Button
