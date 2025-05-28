@@ -157,14 +157,14 @@ const Form = () => {
           onClick={() => setFilter("active")}
           className={filter === "active" ? "active-filter" : ""}
         >
-          Actifs
+          Actives
         </button>
         <button
           type="button"
           onClick={() => setFilter("completed")}
           className={filter === "completed" ? "active-filter" : ""}
         >
-          Complétés
+          Complétées
         </button>
     </div>
 
