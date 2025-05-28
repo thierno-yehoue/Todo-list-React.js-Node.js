@@ -145,10 +145,29 @@ const Form = () => {
       />
 
       <div className="filters">
-        <button type="button" onClick={() => setFilter("all")}>Tous</button>
-        <button type="button" onClick={() => setFilter("active")}>Actifs</button>
-        <button type="button" onClick={() => setFilter("completed")}>Complétés</button>
-      </div>
+        <button
+          type="button"   
+          onClick={() => setFilter("all")}
+          className={filter === "all" ? "active-filter" : ""}
+        >
+          Tous
+        </button>
+        <button
+          type="button"
+          onClick={() => setFilter("active")}
+          className={filter === "active" ? "active-filter" : ""}
+        >
+          Actifs
+        </button>
+        <button
+          type="button"
+          onClick={() => setFilter("completed")}
+          className={filter === "completed" ? "active-filter" : ""}
+        >
+          Complétés
+        </button>
+    </div>
+
 
       <TodoList
         theme={theme}
