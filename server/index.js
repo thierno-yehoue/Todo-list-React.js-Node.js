@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const Tache = require('./tache');
+const Tache = require('./Tache');
 
 const app = express();
 const PORT = 5000;
@@ -9,12 +9,12 @@ const gestionnaireTache = new Tache();
 app.use(cors());
 app.use(express.json());
 
-// GET toutes les tâches
+// GET liste toutes les tâches
 app.get('/api/todos', (req, res) => {
   res.json(gestionnaireTache.lister());
 });
 
-// POST une nouvelle tâche
+// POST creer une nouvelle tâche
 app.post('/api/todos', (req, res) => {
   const newTodo = gestionnaireTache.creer(req.body.text);
   res.status(201).json(newTodo);
